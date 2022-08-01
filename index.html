@@ -1,12 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- * Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="keywords"
+        content="Resto, Restaurant Landing Page Design, BuildWith Angga Frontend Coding Challenge Agustusan" />
+    <meta name="description" content="Resto's Restaurant Landing Page Design." />
+    <meta name="owner" content="Resto" />
+    <meta name="robots" content="home, follow" />
+    <meta name="theme-color" content="#FDC886" />
+
+    <!-- * Tab Page Title -->
+    <title>Resto</title>
+
+    <!-- * Tab Page Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <!-- * External Cascading Style Sheets -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- * Bootstrap v5.2.0 Framework (Cascading Style Sheets & Icon Fonts) -->
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.9.1">
 </head>
-<body>
-    
+
+<body class="container">
+    <!-- * Navigation (Header) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid p-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarToggler">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active ps-0" aria-current="page" href="/">Home</a>
+                    </li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Category
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm">
+                        <li>
+                            <a class="dropdown-item" href="/fast-food">Fast Food</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/fast-casual-dining">Fast Casual Dining</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/cafe">Cafe</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/casual-style-dining">Casual Style Dining</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="/fine-dining">Fine Dining</a>
+                        </li>
+                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about-us">About us</a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="/">
+                    <img src="images/logo.svg" alt="Logo" class="d-inline-block align-text-top">
+                </a>
+                <form class="d-flex gap-2" role="search">
+                    <div class="input-group flex-nowrap shadow-sm rounded">
+                        <span class="input-group-text bg-white border-0" id="addon-wrapping">
+                            <img src="bootstrap-icons-1.9.1/search.svg" alt="Search">
+                        </span>
+                        <input type="text" class="form-control border-0" placeholder="Search your favorite food"
+                            aria-label="Search" aria-describedby="addon-wrapping">
+                    </div>
+                    <button class="btn btn-secondary border-0 shadow-sm w-50" type="button">Log In</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- * Main Content -->
+    <main class="vstack gap-5 my-5">
+        <section id="carousel">
+            <div class="card border-0 rounded-5 shadow-sm w-50 gap-5 p-4">
+                <div class="vstack gap-2">
+                    <div class="aligned">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
+                        <span class="text-warning fs-5 fw-semibold">&ensp;5.0</span>
+                        <span class="text-secondary">&ensp;(5.2K+)</span>
+                    </div>
+                    <h4>Padang Restaurant</h4>
+                    <h5 class="text-secondary">IDR 49.999 - IDR 560.000</h5>
+                    <div class="aligned">
+                        <img src="bootstrap-icons-1.9.1/geo-alt-fill.svg" alt="Location" class="icon-small">
+                        <span class="text-secondary">&ensp;Padang, Indonesia</span>
+                    </div>
+                </div>
+                <div class="vstack gap-4">
+                    <a href="/reservation">
+                        <button class="btn btn-primary border-0 shadow-sm">
+                            Make Reservation<img src="bootstrap-icons-1.9.1/arrow-right-short.svg" alt="Reservation"
+                                class="icon-small">
+                        </button>
+                    </a>
+                    <div class="aligned">
+                        <img src="bootstrap-icons-1.9.1/info-square.svg" alt="Information" class="icon-small">
+                        <span class="text-secondary">&ensp;No extra cost</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefit">
+            <div class="text-center vstack gap-3">
+                <div class="row">
+                    <h6 class="title">Special Benefit For You</h6>
+                    <h3>Why Should Choose Us?</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card border-0 rounded-5 shadow-sm p-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary border-0 shadow-sm">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card border-0 rounded-5 shadow-sm p-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary border-0 shadow-sm">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card border-0 rounded-5 shadow-sm p-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary border-0 shadow-sm">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card border-0 rounded-5 shadow-sm p-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                </p>
+                                <a href="#" class="btn btn-primary border-0 shadow-sm">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured">
+            <h6 class="title">Top 3 Featured Restaurant</h6>
+            <h3>Most Popular Restaurants</h3>
+        </section>
+        <section id="based">
+            <h6 class="title">Restaurant Based By City</h6>
+            <h3>Restaurant Near You</h3>
+        </section>
+        <section id="expert">
+            <h6 class="title">Top 4 Expert Chefs</h6>
+            <h3>Expert Chefs in Fuddy</h3>
+        </section>
+    </main>
+
+    <!-- * Bootstrap Framework (JavaScript Bundle with Popper) -->
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
