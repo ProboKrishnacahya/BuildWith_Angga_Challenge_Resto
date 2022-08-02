@@ -1,67 +1,100 @@
-/*! DESKTOP VIEW */
-
+/*! Desktop Mode View */
 /** Page Structures */
-body {
-    font-family: var(--font-primary) !important;
-    background: var(--background) !important;
-    color: var(--text-primary);
+a {
+    text-decoration: none !important;
+    color: var(--cherokee);
 }
 
-img,
 a,
+img,
 .nav-link {
     -webkit-user-drag: none;
     user-select: none;
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-primary);
+body {
+    font-family: var(--font-primary) !important;
+    background: var(--snow) !important;
+    color: var(--black-russian);
+}
+
+button {
+    box-shadow: none !important;
 }
 
 /** Pseudo-elements */
+::placeholder {
+    font-size: small;
+}
+
+::selection {
+    background: var(--cherokee);
+}
+
 ::-webkit-scrollbar {
     height: 0.625rem;
 }
 
-::-webkit-scrollbar-track {
-    background-color: var(--text-primary);
-}
-
 ::-webkit-scrollbar-thumb {
     border-radius: 0.625rem;
-    border: 4px solid var(--text-primary);
-    background-color: var(--text-secondary);
+    border: 4px solid var(--black-russian);
+    background-color: var(--dim-gray);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-secondary);
-}
-
-::selection {
-    background: var(--color-primary);
+::-webkit-scrollbar-track {
+    background-color: var(--black-russian);
 }
 
 /** Pseudo-classes */
 :root {
-    --background: #FAFAFA;
-    --color-primary: #FDC886;
-    --color-secondary: #5A4FCF;
-    --color-tertiary: #5A4FCF3E;
-    --text-primary: #232631;
-    --text-secondary: #656565;
+    /* Color (Color naming from: https://www.htmlcsscolor.com/) */
+    --black-desaturated: #00000013;
+    --black-russian: #232631;
+    --cherokee: #FDC886;
+    --dim-gray: #656565;
+    --slate-blue: #5A4FCF;
+    --slate-blue-desaturated: #5A4FCF1A;
+    --snow: #FAFAFA;
+    --white: #FFFFFF;
+    /* Font */
     --font-primary: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--slate-blue);
+}
+
+a:hover {
+    color: var(--slate-blue) !important;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+input:focus {
+    border: 2px solid var(--slate-blue) !important;
+    box-shadow: none !important;
+}
+
+.card-footer:hover {
+    background-color: var(--cherokee) !important;
+}
+
+.expert-chefs-card:hover {
+    box-shadow: 0px 2px 4px 0px var(--black-desaturated);
+    background-color: var(--white) !important;
+}
+
+/** Selector (Class) */
 .btn-primary {
-    background-color: var(--color-primary) !important;
-    color: var(--text-primary) !important;
+    background-color: var(--cherokee) !important;
+    color: var(--black-russian) !important;
 }
 
 .btn-secondary {
-    font-weight: 600 !important;
-    background-color: var(--color-tertiary) !important;
-    color: var(--color-secondary) !important;
+    background-color: var(--slate-blue-desaturated) !important;
+    color: var(--slate-blue) !important;
 }
 
 .card {
@@ -69,19 +102,32 @@ a {
 }
 
 .icon-small {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.icon-medium {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.title {
-    text-transform: uppercase;
-    color: var(--color-secondary);
-}
-
-.aligned {
+.horizontal {
     vertical-align: middle;
 }
 
-button:active {
-    transform: scale(.9);
+.nav-link.active {
+    border-bottom: 2px solid var(--slate-blue) !important;
+}
+
+.overview {
+    top: 225px;
+    z-index: 1;
+}
+
+.profile-detail {
+    color: var(--cherokee);
+}
+
+.title {
+    color: var(--slate-blue);
 }

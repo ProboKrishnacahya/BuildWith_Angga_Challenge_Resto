@@ -22,7 +22,7 @@
     <!-- * External Cascading Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- * Bootstrap v5.2.0 Framework (Cascading Style Sheets & Icon Fonts) -->
+    <!-- * Bootstrap v5.2.0 Framework (Cascading Style Sheets & Icons) -->
     <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap-icons-1.9.1">
 </head>
@@ -35,10 +35,12 @@
                 aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Menu -->
             <div class="collapse navbar-collapse justify-content-between" id="navbarToggler">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active ps-0" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -68,19 +70,28 @@
                         <a class="nav-link" href="/about-us">About us</a>
                     </li>
                 </ul>
+
+                <!-- Logo -->
                 <a class="navbar-brand" href="/">
-                    <img src="images/logo.svg" alt="Logo" class="d-inline-block align-text-top">
+                    <img src="images/logo.svg" alt="Logo">
                 </a>
-                <form class="d-flex gap-2" role="search">
-                    <div class="input-group flex-nowrap shadow-sm rounded">
-                        <span class="input-group-text bg-white border-0" id="addon-wrapping">
-                            <img src="bootstrap-icons-1.9.1/search.svg" alt="Search">
-                        </span>
-                        <input type="text" class="form-control border-0" placeholder="Search your favorite food"
-                            aria-label="Search" aria-describedby="addon-wrapping">
-                    </div>
-                    <button class="btn btn-secondary border-0 shadow-sm w-50" type="button">Log In</button>
-                </form>
+
+                <div class="hstack gap-2">
+                    <!-- Search Bar -->
+                    <form role="search">
+                        <div class="input-group flex-nowrap shadow-sm rounded">
+                            <span class="input-group-text bg-white border-0" id="addon-wrapping">
+                                <img src="bootstrap-icons-1.9.1/search.svg" alt="Search">
+                            </span>
+                            <input type="text" class="form-control border-0" placeholder="Search your favorite food"
+                                aria-label="Search" aria-describedby="addon-wrapping">
+                        </div>
+                    </form>
+
+                    <!-- Log In Button -->
+                    <a href="/login" class="btn btn-secondary fw-semibold border-0 rounded-3 shadow-sm w-25"
+                        type="button">Log In</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -88,34 +99,57 @@
     <!-- * Main Content -->
     <main class="vstack gap-5 my-5">
         <section id="carousel">
-            <div class="card border-0 rounded-5 shadow-sm w-50 gap-5 p-4">
+            <!-- Restaurant Photo (Image Carousel) -->
+            <div id="carouselControls" class="carousel slide position-relative ms-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/carousel_1.svg" class="d-block w-100" alt="Carousel 1.svg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/carousel_2.svg" class="d-block w-100" alt="Carousel 2.svg">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon d-none" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon d-none" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Restaurant Overview (Card Overlay) -->
+            <div class="overview card border-0 rounded-4 shadow-sm w-25 position-absolute gap-5 p-4">
                 <div class="vstack gap-2">
-                    <div class="aligned">
-                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
-                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
-                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
-                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
-                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-small">
+                    <div class="horizontal">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-medium">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-medium">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-medium">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-medium">
+                        <img src="bootstrap-icons-1.9.1/star-fill.svg" alt="Rating" class="icon-medium">
                         <span class="text-warning fs-5 fw-semibold">&ensp;5.0</span>
-                        <span class="text-secondary">&ensp;(5.2K+)</span>
+                        <span class="text-muted">&ensp;(5.2K+)</span>
                     </div>
                     <h4>Padang Restaurant</h4>
-                    <h5 class="text-secondary">IDR 49.999 - IDR 560.000</h5>
-                    <div class="aligned">
-                        <img src="bootstrap-icons-1.9.1/geo-alt-fill.svg" alt="Location" class="icon-small">
-                        <span class="text-secondary">&ensp;Padang, Indonesia</span>
+                    <h5 class="text-muted">IDR 49.999 - IDR 560.000</h5>
+                    <div class="horizontal">
+                        <img src="bootstrap-icons-1.9.1/geo-alt-fill.svg" alt="Location" class="icon-medium">
+                        <span class="text-muted">&ensp;Padang, Indonesia</span>
                     </div>
                 </div>
                 <div class="vstack gap-4">
-                    <a href="/reservation">
-                        <button class="btn btn-primary border-0 shadow-sm">
-                            Make Reservation<img src="bootstrap-icons-1.9.1/arrow-right-short.svg" alt="Reservation"
-                                class="icon-small">
+                    <a href="/reservation?id=1">
+                        <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
+                            Make Reservation
+                            <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Reservation" class="icon-small">
                         </button>
                     </a>
-                    <div class="aligned">
-                        <img src="bootstrap-icons-1.9.1/info-square.svg" alt="Information" class="icon-small">
-                        <span class="text-secondary">&ensp;No extra cost</span>
+                    <div class="horizontal">
+                        <img src="bootstrap-icons-1.9.1/info-square.svg" alt="Information" class="icon-medium">
+                        <span class="text-muted">&ensp;No extra cost</span>
                     </div>
                 </div>
             </div>
@@ -123,52 +157,90 @@
 
         <section id="benefit">
             <div class="text-center vstack gap-3">
+                <!-- Section Title -->
                 <div class="row">
-                    <h6 class="title">Special Benefit For You</h6>
+                    <h6 class="title text-uppercase">Special Benefit For You</h6>
                     <h3>Why Should Choose Us?</h3>
                 </div>
+
+                <!-- Special Benefits (Card) -->
                 <div class="row">
                     <div class="col-sm-3">
-                        <div class="card border-0 rounded-5 shadow-sm p-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
+                        <div class="card h-100 border-0 rounded-4 shadow-sm vstack gap-3 p-0">
+                            <div class="card-body vstack gap-2 p-4">
+                                <img src="images/special_benefit_1.svg" alt="Reservation" class="mx-5 pb-3">
+                                <h5 class="card-title">Extra Discounts</h5>
+                                <p class="card-text text-muted">Get your special discount by using our reservation
                                 </p>
-                                <a href="#" class="btn btn-primary border-0 shadow-sm">Go somewhere</a>
+                            </div>
+                            <div class="card-footer rounded-4 border-0 bg-transparent p-0">
+                                <a href="/special-benefit/extra-discounts">
+                                    <button class="btn btn-primary fw-semibold border-0 bg-transparent  w-100 py-3">
+                                        View Details
+                                        <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Reservation"
+                                            class="icon-small">
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="card border-0 rounded-5 shadow-sm p-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
+                        <div class="card h-100 border-0 rounded-4 shadow-sm vstack gap-3 p-0">
+                            <div class="card-body vstack gap-2 p-4">
+                                <img src="images/special_benefit_2.svg" alt="Reservation" class="mx-5 pb-3">
+                                <h5 class="card-title">Come and Eat</h5>
+                                <p class="card-text text-muted">Get your own table quickly & without waiting in line
                                 </p>
-                                <a href="#" class="btn btn-primary border-0 shadow-sm">Go somewhere</a>
+                            </div>
+                            <div class="card-footer rounded-4 border-0 bg-transparent p-0">
+                                <a href="/special-benefit/come-and-eat">
+                                    <button
+                                        class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3">
+                                        View Details
+                                        <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Reservation"
+                                            class="icon-small">
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="card border-0 rounded-5 shadow-sm p-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
-                                </p>
-                                <a href="#" class="btn btn-primary border-0 shadow-sm">Go somewhere</a>
+                        <div class="card h-100 border-0 rounded-4 shadow-sm vstack gap-3 p-0">
+                            <div class="card-body vstack gap-2 p-4">
+                                <img src="images/special_benefit_3.svg" alt="Reservation" class="mx-5 pb-3">
+                                <h5 class="card-title">No Extra Fee</h5>
+                                <p class="card-text text-muted">Get tax free if you want to order food and make a
+                                    reservation</p>
+                            </div>
+                            <div class="card-footer rounded-4 border-0 bg-transparent p-0">
+                                <a href="/special-benefit/no-extra-fee">
+                                    <button
+                                        class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3">
+                                        View Details
+                                        <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Reservation"
+                                            class="icon-small">
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="card border-0 rounded-5 shadow-sm p-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.
-                                </p>
-                                <a href="#" class="btn btn-primary border-0 shadow-sm">Go somewhere</a>
+                        <div class="card h-100 border-0 rounded-4 shadow-sm vstack gap-3 p-0">
+                            <div class="card-body vstack gap-2 p-4">
+                                <img src="images/special_benefit_4.svg" alt="Reservation" class="mx-5 pb-3">
+                                <h5 class="card-title">Guaranteed Cleanliness</h5>
+                                <p class="card-text text-muted">We ensure the cleanliness of the place as well as the
+                                    food</p>
+                            </div>
+                            <div class="card-footer rounded-4 border-0 bg-transparent p-0">
+                                <a href="/special-benefit/guaranteed-cleanliness">
+                                    <button
+                                        class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3">
+                                        View Details
+                                        <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Reservation"
+                                            class="icon-small">
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -177,16 +249,114 @@
         </section>
 
         <section id="featured">
-            <h6 class="title">Top 3 Featured Restaurant</h6>
+            <!-- Section Title -->
+            <h6 class="title text-uppercase">Top 3 Featured Restaurant</h6>
             <h3>Most Popular Restaurants</h3>
         </section>
         <section id="based">
-            <h6 class="title">Restaurant Based By City</h6>
+            <!-- Section Title -->
+            <h6 class="title text-uppercase">Restaurant Based By City</h6>
             <h3>Restaurant Near You</h3>
         </section>
         <section id="expert">
-            <h6 class="title">Top 4 Expert Chefs</h6>
-            <h3>Expert Chefs in Fuddy</h3>
+            <div class="hstack gap-5">
+                <!-- Chef Profile (Photo) -->
+                <img src="images/expert_chef.svg" alt="Expert Chef" class="rounded-5 shadow-sm">
+
+                <div class="vstack gap-4">
+                    <!-- Section Title -->
+                    <div>
+                        <h6 class="title text-uppercase">Top 4 Expert Chefs</h6>
+                        <h3>Expert Chefs in Fuddy</h3>
+                    </div>
+
+                    <!-- Chef Profile (Card) -->
+                    <div class="vstack gap-2">
+                        <div class="expert-chefs-card card border-0 rounded-4 bg-transparent hstack gap-5 p-4">
+                            <div class="vstack gap-2">
+                                <span class="text-muted text-uppercase">Pizza</span>
+                                <h4>Phoenix Satcheup</h4>
+                                <div class="horizontal">
+                                    <img src="bootstrap-icons-1.9.1/geo-alt-fill.svg" alt="Location"
+                                        class="icon-medium">
+                                    <span class="text-muted">&ensp;Jakarta, Indonesia</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="/fuddy-expert-chefs/profile-details?id=1"
+                                    class="profile-detail align-middle">Profile
+                                    Details
+                                    <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Profile Details"
+                                        class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="expert-chefs-card card border-0 rounded-4 bg-transparent hstack gap-5 p-4">
+                            <div class="vstack gap-2">
+                                <span class="text-muted text-uppercase">Vegan</span>
+                                <h4>Chamber Botfrag</h4>
+                                <div class="horizontal">
+                                    <img src="bootstrap-icons-1.9.1/geo-alt-fill.svg" alt="Location"
+                                        class="icon-medium">
+                                    <span class="text-muted">&ensp;Bandung, Indonesia</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="/fuddy-expert-chefs/profile-details?id=2"
+                                    class="profile-detail align-middle">Profile
+                                    Details
+                                    <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Profile Details"
+                                        class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="expert-chefs-card card border-0 rounded-4 bg-transparent hstack gap-5 p-4">
+                            <div class="vstack gap-2">
+                                <span class="text-muted text-uppercase">Roast Chicken</span>
+                                <h4>Asep Vandal</h4>
+                                <div class="horizontal">
+                                    <img src="bootstrap-icons-1.9.1/geo-alt-fill.svg" alt="Location"
+                                        class="icon-medium">
+                                    <span class="text-muted">&ensp;Sunda, Indonesia</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="/fuddy-expert-chefs/profile-details?id=3"
+                                    class="profile-detail align-middle">Profile
+                                    Details
+                                    <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Profile Details"
+                                        class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="expert-chefs-card card border-0 rounded-4 bg-transparent hstack gap-5 p-4">
+                            <div class="vstack gap-2">
+                                <span class="text-muted text-uppercase">Beef Steak</span>
+                                <h4>I Made Invoker </h4>
+                                <div class="horizontal">
+                                    <img src="bootstrap-icons-1.9.1/geo-alt-fill.svg" alt="Location"
+                                        class="icon-medium">
+                                    <span class="text-muted">&ensp;Bali, Indonesia</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="/fuddy-expert-chefs/profile-details?id=4"
+                                    class="profile-detail align-middle">Profile
+                                    Details
+                                    <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="Profile Details"
+                                        class="icon-small">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/fuddy-expert-chefs">
+                        <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
+                            View All Chef
+                            <img src="bootstrap-icons-1.9.1/chevron-right.svg" alt="View All Chef" class="icon-small">
+                        </button>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
