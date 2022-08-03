@@ -81,7 +81,7 @@ input:focus {
     background-color: var(--cherokee) !important;
 }
 
-.expert-chefs-card:hover {
+.fuddy-top-4:hover {
     box-shadow: 0px 2px 4px 0px var(--black-desaturated);
     background-color: var(--white) !important;
 }
@@ -99,6 +99,17 @@ input:focus {
 
 .card {
     padding: 1rem;
+}
+
+.chef-at-restaurant {
+    z-index: 1;
+    top: 2175px;
+}
+
+.experience {
+    z-index: 1;
+    top: 1600px;
+    left: 700px;
 }
 
 .icon-small {
@@ -120,11 +131,11 @@ input:focus {
 }
 
 .overview {
-    top: 225px;
     z-index: 1;
+    top: 250px;
 }
 
-.profile-detail {
+.text-link {
     color: var(--cherokee);
 }
 
