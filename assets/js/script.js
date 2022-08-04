@@ -5,4 +5,3 @@ const fadeOut = () => {
 }
 
 window.addEventListener('load', fadeOut);
-
