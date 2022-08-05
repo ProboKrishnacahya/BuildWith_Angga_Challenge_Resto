@@ -12,6 +12,14 @@ img,
     user-select: none;
 }
 
+a,
+input,
+p,
+span,
+::placeholder {
+    font-weight: 400 !important;
+}
+
 body {
     overflow-x: hidden;
     font-family: var(--font-family) !important;
@@ -36,14 +44,6 @@ html {
     -moz-osx-font-smoothing: auto;
 }
 
-a,
-input,
-p,
-span,
-::placeholder {
-    font-weight: 400 !important;
-}
-
 /** Selector (Class) */
 .btn-primary {
     background-color: var(--cherokee) !important;
@@ -53,17 +53,6 @@ span,
 .btn-secondary {
     background-color: var(--slate-blue-desaturated) !important;
     color: var(--slate-blue) !important;
-}
-
-.chef-at-restaurant {
-    z-index: 1;
-    top: 3115px;
-}
-
-.experience {
-    z-index: 1;
-    top: 2530px;
-    left: 540px;
 }
 
 .fade {
@@ -84,21 +73,11 @@ span,
     border-bottom: 2px solid var(--slate-blue) !important;
 }
 
-.overview {
-    z-index: 1;
-    top: 225px;
-    left: 33px;
-}
-
 .preloader {
     z-index: 9999;
     inset: 0;
-    transition: opacity .25s, visibility 1s;
+    transition: opacity 0.25s, visibility 1s;
     background-color: var(--cherokee);
-}
-
-.slider {
-    overflow-x: scroll;
 }
 
 .text-link {
@@ -109,10 +88,35 @@ span,
     color: var(--slate-blue);
 }
 
+.zoom-in {
+    height: auto;
+    overflow: hidden;
+}
+
+.zoom-in img {
+    transition: transform 1s ease;
+}
+
+/** Selector (ID) */
+#chef-at-restaurant {
+    z-index: 1;
+    top: 3170px;
+}
+
+#experience {
+    z-index: 1;
+    top: 2580px;
+    left: 540px;
+}
+
+#overview {
+    z-index: 1;
+    left: -75px;
+}
+
 /** Pseudo-classes */
 :root {
     /* Color (Color naming from: https://www.htmlcsscolor.com/) */
-    --black-desaturated: #00000013;
     --black-russian: #232631;
     --cherokee: #FDC886;
     --dim-gray: #656565;
@@ -133,13 +137,17 @@ a:hover {
     color: var(--slate-blue) !important;
 }
 
-button:active {
+button:active:not(#choose, #location) {
     transform: scale(0.9);
 }
 
 input:focus {
-    border: 2px solid var(--slate-blue) !important;
+    outline: 2px solid var(--slate-blue) !important;
     box-shadow: none !important;
+}
+
+section:not(:first-child, :last-child) {
+    margin: 1.5rem 0;
 }
 
 .card-footer:hover {
@@ -150,13 +158,8 @@ input:focus {
     background-color: var(--slate-blue-desaturated) !important;
 }
 
-.fuddy-top-4:hover {
-    box-shadow: 0px 2px 4px 0px var(--black-desaturated);
-    background-color: var(--white) !important;
-}
-
-section:not(:first-child, :last-child) {
-    margin: 1.5rem 0;
+.zoom-in:hover img {
+    transform: scale(1.1);
 }
 
 /** Pseudo-elements */
@@ -184,6 +187,18 @@ section:not(:first-child, :last-child) {
 
 .slider::-webkit-scrollbar {
     display: none;
+}
+
+.slider {
+    height: 90vh;
+    top: 0;
+    left: 85px;
+}
+
+.slider-inner {
+    display: flex;
+    gap: 0.625rem;
+    pointer-events: none;
 }
 
 /* * At-rules */

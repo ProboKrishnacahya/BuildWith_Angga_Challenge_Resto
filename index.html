@@ -2,41 +2,47 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <!--* Meta Tags -->
+    <!--* Start of Meta Tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
         content="Resto, Restaurant Landing Page Design, BuildWith Angga, Frontend Coding Challenge Agustusan, Figma Slicing" />
     <meta name="description" content="Resto's Restaurant Landing Page Design." />
+    <meta name="author" content="Probo Krishnacahya, probo.krishnacahya@gmail.com">
     <meta name="owner" content="Resto" />
-    <meta name="robots" content="home, follow" />
     <meta name="theme-color" content="#5A4FCF" />
+    <!--* End of Meta Tags -->
 
-    <!--* Tab Page Title -->
+    <!--* Start of Tab Page Title -->
     <title>Resto</title>
+    <!--* End of Tab Page Title -->
 
-    <!--* Tab Page Favicon -->
+    <!--* Start of Page Favicon -->
     <link rel="icon" href="assets/img/favicon.ico" type="image/ico" />
+    <!--* End of Page Favicon -->
 
-    <!--* External Cascading Style Sheets -->
+    <!--* Start of External Cascading Style Sheets -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--* End of External Cascading Style Sheets -->
 
-    <!--* Bootstrap Framework (Cascading Style Sheets & Icons) -->
+    <!--* Start of Bootstrap Framework (Cascading Style Sheets & Icons) -->
     <link rel="stylesheet" href="assets/framework/bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/framework/bootstrap-icons-1.9.1/font/bootstrap-icons.css">
+    <!--* End of Bootstrap Framework (Cascading Style Sheets & Icons) -->
 </head>
 
 <body class="container-fluid">
-    <!--* Website Preloading -->
+    <!--* Start of Website Preloading -->
     <div class="preloader position-fixed d-grid align-items-center text-center">
         <div>
             <div class="spinner-border p-4 my-5" role="status"></div>
             <h4>Loading.. Please Wait</h4>
         </div>
     </div>
+    <!--* End of Website Preloading -->
 
-    <!--* Navigation (Header) -->
+    <!--* Start of Navigation (Header) -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
@@ -44,7 +50,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menu -->
+            <!-- Start of Menu -->
             <div class="collapse navbar-collapse justify-content-between" id="navbarToggler">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -78,14 +84,16 @@
                         <a class="nav-link" href="/about-us">About us</a>
                     </li>
                 </ul>
+                <!-- End of Menu -->
 
-                <!-- Logo -->
+                <!-- Start of Logo -->
                 <a class="navbar-brand" href="/">
                     <img src="assets/img/logo.svg" alt="Logo" loading="lazy">
                 </a>
+                <!-- End of Logo -->
 
                 <div class="hstack gap-2">
-                    <!-- Search Bar -->
+                    <!-- Start of Search Bar -->
                     <form role="search">
                         <div class="input-group flex-nowrap shadow-sm rounded">
                             <span class="input-group-text border-0 bg-white p-2" id="addon-wrapping">
@@ -96,70 +104,78 @@
                                 aria-describedby="addon-wrapping">
                         </div>
                     </form>
+                    <!-- End of Search Bar -->
 
-                    <!-- Log In Button -->
+                    <!-- Start of Log In Button -->
                     <a href="/login" class="btn btn-secondary fw-semibold border-0 rounded-3 shadow-sm w-25 p-2"
                         type="button">Log In</a>
+                    <!-- End of Log In Button -->
                 </div>
             </div>
         </div>
     </nav>
+    <!--* End of Navigation (Header) -->
 
-    <!--* Main Content -->
+    <!--* Start of Main Content -->
     <main class="vstack gap-5 my-5">
-        <!-- #1 Slider -->
+        <!-- Start of Section #1 Slider -->
         <section id="reservation">
-            <!-- Restaurant Photo (Image Slider) -->
-            <div class="slider hstack gap-4 rounded-4 ms-5 ps-4 container-fluid">
-                <img src="assets/img/carousel_1.svg" alt="Slider" class="w-75" loading="lazy">
-                <img src="assets/img/carousel_2.svg" alt="Slider" class="w-75" loading="lazy">
-            </div>
-
-            <!-- Restaurant Overview (Card Overlay) -->
-            <div class="overview card border-0 rounded-4 shadow-sm w-25 position-absolute gap-4 p-4">
-                <div class="vstack">
-                    <div class="horizontal text-muted">
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <span class="text-warning fw-semibold">5.0</span>
-                        <span class="text-muted">(5.2K+)</span>
+            <!-- Start of Restaurant Photo (Image Slider) -->
+            <div class="slider position-relative">
+                <div class="slider-inner position-absolute hstack gap-4">
+                    <img src="assets/img/carousel_1.svg" alt="Slider" class="w-100">
+                    <!-- Start of Restaurant Overview (Card Overlay) -->
+                    <div class="card border-0 rounded-4 shadow-sm w-25 position-absolute gap-4 p-4" id="overview">
+                        <div class="vstack">
+                            <div class="horizontal text-muted">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <span class="text-warning fw-semibold">5.0</span>
+                                <span class="text-muted">(5.2K+)</span>
+                            </div>
+                            <h4>Padang Restaurant</h4>
+                            <h5 class="text-muted">IDR 49.999 - IDR 560.000</h5>
+                            <div class="horizontal text-muted">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>&ensp;Padang, Indonesia</span>
+                            </div>
+                        </div>
+                        <div class="vstack gap-2">
+                            <a href="/reservation?id=1">
+                                <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
+                                    Make Reservation&ensp;
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </a>
+                            <div class="horizontal text-muted">
+                                <i class="bi bi-info-square"></i>
+                                <span>&ensp;No extra cost</span>
+                            </div>
+                        </div>
                     </div>
-                    <h4>Padang Restaurant</h4>
-                    <h5 class="text-muted">IDR 49.999 - IDR 560.000</h5>
-                    <div class="horizontal text-muted">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>&ensp;Padang, Indonesia</span>
-                    </div>
+                    <!-- End of Restaurant Overview (Card Overlay) -->
+                    <img src="assets/img/carousel_2.svg" alt="Slider" class="w-100">
                 </div>
-                <div class="vstack gap-2">
-                    <a href="/reservation?id=1">
-                        <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
-                            Make Reservation&ensp;
-                            <i class="bi bi-chevron-right"></i>
-                        </button>
-                    </a>
-                    <div class="horizontal text-muted">
-                        <i class="bi bi-info-square"></i>
-                        <span>&ensp;No extra cost</span>
-                    </div>
-                </div>
             </div>
+            <!-- End of Restaurant Photo (Image Slider) -->
         </section>
+        <!-- End of Section #1 Slider -->
 
-        <!-- #2 Special Benefit For You -->
+        <!-- Start of Section #2 Special Benefit For You -->
         <section id="benefit">
             <div class="container">
                 <div class="text-center vstack gap-3">
-                    <!-- Section Title -->
+                    <!-- Start of Section Title -->
                     <div class="row">
                         <h6 class="title text-uppercase">Special Benefit For You</h6>
                         <h3>Why Should Choose Us?</h3>
                     </div>
+                    <!-- End of Section Title -->
 
-                    <!-- Special Benefits (Card) -->
+                    <!-- Start of Special Benefits (Card) -->
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="card h-100 border-0 rounded-4 shadow-sm vstack gap-3 p-0">
@@ -172,7 +188,8 @@
                                 </div>
                                 <div class="card-footer rounded-4 border-0 bg-transparent p-0">
                                     <a href="/special-benefit/extra-discounts">
-                                        <button class="btn btn-primary fw-semibold border-0 bg-transparent  w-100 py-3">
+                                        <button class="btn btn-primary fw-semibold border-0 bg-transparent w-100 py-3"
+                                            id="choose">
                                             View Details&ensp;
                                             <i class="bi bi-chevron-right"></i>
                                         </button>
@@ -192,7 +209,8 @@
                                 <div class="card-footer rounded-4 border-0 bg-transparent p-0">
                                     <a href="/special-benefit/come-and-eat">
                                         <button
-                                            class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3">
+                                            class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3"
+                                            id="choose">
                                             View Details&ensp;
                                             <i class="bi bi-chevron-right"></i>
                                         </button>
@@ -212,7 +230,8 @@
                                 <div class="card-footer rounded-4 border-0 bg-transparent p-0">
                                     <a href="/special-benefit/no-extra-fee">
                                         <button
-                                            class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3">
+                                            class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3"
+                                            id="choose">
                                             View Details&ensp;
                                             <i class="bi bi-chevron-right"></i>
                                         </button>
@@ -233,7 +252,8 @@
                                 <div class="card-footer rounded-4 border-0 bg-transparent p-0">
                                     <a href="/special-benefit/guaranteed-cleanliness">
                                         <button
-                                            class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3">
+                                            class="btn btn-primary fw-semibold border-0 bg-transparent rounded-4 w-100 py-3"
+                                            id="choose">
                                             View Details&ensp;
                                             <i class="bi bi-chevron-right"></i>
                                         </button>
@@ -242,16 +262,18 @@
                             </div>
                         </div>
                     </div>
+                    <!-- End of Special Benefits (Card) -->
                 </div>
             </div>
         </section>
+        <!-- End of Section #2 Special Benefit For You -->
 
-        <!-- Top 3 Featured Restaurant -->
+        <!-- Start of Section #3 Top 3 Featured Restaurant -->
         <section id="featured">
             <div class="container">
                 <div class="hstack gap-5">
                     <div class="vstack gap-5 align-self-center w-25">
-                        <!-- Section Title -->
+                        <!-- Start of Section Title -->
                         <div class="vstack gap-2">
                             <div>
                                 <h6 class="title text-uppercase">Top 3 Featured Restaurant</h6>
@@ -261,8 +283,9 @@
                                 terms
                                 of place, price, comfort and of course the taste of the food itself.</p>
                         </div>
+                        <!-- End of Section Title -->
 
-                        <!-- View All Restaurant -->
+                        <!-- Start of View All Restaurant (Button) -->
                         <div>
                             <a href="/featured-restaurant">
                                 <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
@@ -271,11 +294,12 @@
                                 </button>
                             </a>
                         </div>
+                        <!-- End of View All Restaurant (Button) -->
                     </div>
 
-                    <!-- Most Popular Restaurants -->
+                    <!-- Start of Most Popular Restaurants -->
                     <div class="hstack gap-3">
-                        <div class="card border-0 rounded-4 shadow-sm">
+                        <div class="zoom-in card border-0 rounded-4 shadow-sm">
                             <img src="/assets/img/top_3_featured_1.svg" alt="Featured Restaurant"
                                 class="card-img rounded-4" loading="lazy">
                             <div class="card-img-overlay top-50 mt-4 px-4 pt-5">
@@ -301,30 +325,37 @@
                                 </div>
                             </div>
                         </div>
-                        <img src="/assets/img/top_3_featured_2.svg" alt="Featured Restaurant" class="rounded-4"
-                            loading="lazy">
-                        <img src="/assets/img/top_3_featured_3.svg" alt="Featured Restaurant" class="rounded-4"
-                            loading="lazy">
+                        <div class="zoom-in rounded-4">
+                            <img src="/assets/img/top_3_featured_2.svg" alt="Featured Restaurant" loading="lazy">
+                        </div>
+                        <div class="zoom-in rounded-4">
+                            <img src="/assets/img/top_3_featured_3.svg" alt="Featured Restaurant" loading="lazy">
+                        </div>
                     </div>
+                    <!-- End of Most Popular Restaurants -->
                 </div>
             </div>
         </section>
+        <!-- End of Section #3 Top 3 Featured Restaurant -->
 
-        <!-- Restaurant Based By City -->
+        <!-- Start of Section #4 Restaurant Based By City -->
         <section id="based">
             <div class="container">
                 <div class="vstack gap-3">
                     <div class="hstack justify-content-between">
-                        <!-- Section Title -->
+                        <!-- Start of Section Title -->
                         <div>
                             <h6 class="title text-uppercase">Restaurant Based By City</h6>
                             <h3>Restaurant Near You</h3>
                         </div>
+                        <!-- End of Section Title -->
+
+                        <!-- Start of Location (Dropdown) -->
                         <div>
                             <div class="dropdown dropdown-center">
                                 <button
                                     class="btn btn-secondary border-0 bg-secondary bg-opacity-10 text-secondary shadow-sm dropdown-toggle p-3"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    id="location" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-geo-alt-fill"></i>&ensp;Jakarta, Indonesia
                                 </button>
                                 <ul class="dropdown-menu border-0 shadow-sm">
@@ -334,11 +365,12 @@
                                 </ul>
                             </div>
                         </div>
+                        <!-- End of Location (Dropdown) -->
                     </div>
 
-                    <!-- Restaurant Near You -->
+                    <!-- Start of Restaurant Near You -->
                     <div class="hstack gap-4">
-                        <div class="card border-0 rounded-4 shadow-sm p-0">
+                        <div class="zoom-in card border-0 rounded-4 shadow-sm p-0">
                             <img src="/assets/img/near_restaurant_1.svg" alt="Near Restaurant"
                                 class="card-img rounded-4" loading="lazy">
                             <div class="card-img-overlay top-50 mt-4 pt-4">
@@ -361,7 +393,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card border-0 rounded-4 shadow-sm p-0">
+                        <div class="zoom-in card border-0 rounded-4 shadow-sm p-0">
                             <img src="/assets/img/near_restaurant_2.svg" alt="Near Restaurant"
                                 class="card-img rounded-4" loading="lazy">
                             <div class="card-img-overlay top-50 mt-4 pt-4">
@@ -384,7 +416,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card border-0 rounded-4 shadow-sm p-0">
+                        <div class="zoom-in card border-0 rounded-4 shadow-sm p-0">
                             <img src="/assets/img/near_restaurant_3.svg" alt="Near Restaurant"
                                 class="card-img rounded-4" loading="lazy">
                             <div class="card-img-overlay top-50 mt-4 pt-4">
@@ -408,8 +440,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- End of Restaurant Near You -->
 
-                    <!-- View All Restaurant -->
+                    <!-- Start of View All Restaurant (Button) -->
                     <div class="text-center mt-3">
                         <a href="/restaurant-near-you">
                             <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
@@ -418,19 +451,22 @@
                             </button>
                         </a>
                     </div>
+                    <!-- End of View All Restaurant (Button) -->
                 </div>
             </div>
         </section>
+        <!-- End of Section #4 Restaurant Based By City -->
 
-        <!-- Top 4 Expert Chefs -->
+        <!-- Start of Top 4 Expert Chefs -->
         <section id="expert">
             <div class="container">
                 <div class="hstack gap-5">
-                    <!-- Chef Profile (Photo) -->
+                    <!-- Start of Chef Profile (Photo) -->
                     <img src="assets/img/expert_chef.svg" alt="Expert Chef" loading="lazy"
                         class="rounded-5 shadow-sm position-relative mx-5">
-                    <!-- Chef Profile (Restaurant Card Overlay - Bottom Left) -->
-                    <div class="chef-at-restaurant card border-0 rounded-4 hstack gap-3 p-4 position-absolute">
+                    <!-- End of Chef Profile (Photo) -->
+                    <!-- Start of Chef Profile (Restaurant Card Overlay - Bottom Left) -->
+                    <div class="card border-0 rounded-4 shadow-sm hstack gap-3 p-4 position-absolute" id="chef-at-restaurant">
                         <img src="assets/img/pearl_dolphin.svg" alt="Pearl Dolphin" loading="lazy" class="shadow-sm">
                         <div class="vstack gap-4 align-self-center">
                             <div>
@@ -446,25 +482,28 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Chef Profile (Experience - Top Right) -->
-                    <div class="experience card border-0 rounded-4 vstack gap-3 px-0 py-2 position-absolute">
+                    <!-- End of Chef Profile (Restaurant Card Overlay - Bottom Left) -->
+                    <!-- Start of Chef Profile (Experience - Top Right) -->
+                    <div class="card border-0 rounded-4 shadow-sm vstack gap-3 px-0 py-2 position-absolute" id="experience">
                         <img src="assets/img/experience.svg" alt="Experience" loading="lazy" class="mx-5 pt-3">
                         <div class="text-center">
                             <h5>12 Years</h5>
                             <p class="text-muted">Experience</p>
                         </div>
                     </div>
+                    <!-- End of Chef Profile (Experience - Top Right) -->
 
                     <div class="vstack gap-4">
-                        <!-- Section Title -->
+                        <!-- Start of Section Title -->
                         <div>
                             <h6 class="title text-uppercase">Top 4 Expert Chefs</h6>
                             <h3>Expert Chefs in Fuddy</h3>
                         </div>
+                        <!-- End of Section Title -->
 
-                        <!-- Expert Chefs in Fuddy (Top 4) -->
+                        <!-- Start of Expert Chefs in Fuddy (Top 4) -->
                         <div class="vstack gap-2">
-                            <div class="fuddy-top-4 card border-0 rounded-4 bg-transparent hstack gap-4 p-4">
+                            <div class="fuddy-top-4 card border-0 rounded-4 shadow-sm hstack gap-4 p-4">
                                 <div class="vstack gap-2">
                                     <span class="text-muted text-uppercase">Pizza</span>
                                     <h4>Phoenix Satcheup</h4>
@@ -490,13 +529,6 @@
                                         <span class="text-muted">&ensp;Bandung, Indonesia</span>
                                     </div>
                                 </div>
-                                <div>
-                                    <a href="/expert-chefs/profile-details?id=2"
-                                        class="text-link stretched-link">Profile
-                                        Details&ensp;
-                                        <i class="bi bi-chevron-right"></i>
-                                    </a>
-                                </div>
                             </div>
                             <div class="fuddy-top-4 card border-0 rounded-4 bg-transparent hstack gap-5 p-4">
                                 <div class="vstack gap-2">
@@ -507,51 +539,43 @@
                                         <span class="text-muted">&ensp;Sunda, Indonesia</span>
                                     </div>
                                 </div>
-                                <div>
-                                    <a href="/expert-chefs/profile-details?id=3"
-                                        class="text-link stretched-link">Profile
-                                        Details&ensp;
-                                        <i class="bi bi-chevron-right"></i>
-                                    </a>
-                                </div>
                             </div>
                             <div class="fuddy-top-4 card border-0 rounded-4 bg-transparent hstack gap-5 p-4">
                                 <div class="vstack gap-2">
                                     <span class="text-muted text-uppercase">Beef Steak</span>
-                                    <h4>I Made Invoker </h4>
+                                    <h4>I Made Invoker</h4>
                                     <div class="horizontal text-muted">
                                         <i class="bi bi-geo-alt-fill"></i>
                                         <span class="text-muted">&ensp;Bali, Indonesia</span>
                                     </div>
                                 </div>
-                                <div>
-                                    <a href="/expert-chefs/profile-details?id=4"
-                                        class="text-link stretched-link">Profile
-                                        Details&ensp;
-                                        <i class="bi bi-chevron-right"></i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
+                        <!-- End of Expert Chefs in Fuddy (Top 4) -->
 
-                        <!-- View All Chef -->
+                        <!-- Start of View All Chef (Button) -->
                         <a href="/expert-chefs">
                             <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
                                 View All Chef&ensp;
                                 <i class="bi bi-chevron-right"></i>
                             </button>
                         </a>
+                        <!-- End of View All Chef (Button) -->
                     </div>
                 </div>
             </div>
         </section>
+        <!-- End of Top 4 Expert Chefs -->
     </main>
+    <!--* End of Main Content -->
 
-    <!--* External JavaScript -->
+    <!--* Start of External JavaScript -->
     <script type="text/javascript" src="assets/js/script.js"></script>
+    <!--* End of External JavaScript -->
 
-    <!--* Bootstrap Framework (JavaScript Bundle with Popper) -->
+    <!--* Start of Bootstrap Framework (JavaScript Bundle with Popper) -->
     <script src="assets/framework/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
+    <!--* End of Bootstrap Framework (JavaScript Bundle with Popper) -->
 </body>
 
 </html>
