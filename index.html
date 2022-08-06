@@ -30,17 +30,20 @@
     <link rel="stylesheet" href="assets/framework/bootstrap-5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/framework/bootstrap-icons-1.9.1/font/bootstrap-icons.css">
     <!--* End of Bootstrap Framework (Cascading Style Sheets & Icons) -->
-    <link rel="stylesheet" href="assets/library/aos-master/aos-master/dist/aos.css">
+
+    <!-- * Start of Animate On Scroll Library (Cascading Style Sheets) -->
+    <link rel="stylesheet" href="assets/library/aos/aos-master/dist/aos.css">
+    <!-- * End of Animate On Scroll Library (Cascading Style Sheets) -->
 </head>
 
 <body class="container-fluid">
     <!--* Start of Website Preloading -->
-    <!-- <div class="preloader position-fixed d-grid align-items-center text-center">
+    <div class="position-fixed d-grid align-items-center text-center" id="preloader">
         <div>
             <div class="spinner-border p-4 my-5" role="status"></div>
             <h4>Loading.. Please Wait</h4>
         </div>
-    </div> -->
+    </div>
     <!--* End of Website Preloading -->
 
     <!--* Start of Navigation (Header) -->
@@ -93,9 +96,9 @@
                 </a>
                 <!-- End of Logo -->
 
-                <div class="hstack gap-2">
+                <div class="hstack gap-2 w-25">
                     <!-- Start of Search Bar -->
-                    <form role="search">
+                    <form role="search" class="w-100">
                         <div class="input-group flex-nowrap shadow-sm rounded">
                             <span class="input-group-text border-0 bg-white p-2" id="addon-wrapping">
                                 <i class="bi bi-search text-muted"></i>
@@ -120,45 +123,45 @@
     <!--* Start of Main Content -->
     <main class="vstack gap-5 my-5">
         <!-- Start of Section #1 Slider -->
-        <section id="reservation">
+        <section id="reservation" data-aos="fade-up">
             <!-- Start of Restaurant Photo (Image Slider) -->
             <div class="slider position-relative">
-                <div class="slider-inner position-absolute hstack gap-4">
-                    <img src="assets/img/carousel_1.svg" alt="Slider" class="w-100">
-                    <!-- Start of Restaurant Overview (Card Overlay) -->
-                    <div class="card border-0 rounded-4 shadow-sm w-25 position-absolute gap-4 p-4" id="overview">
-                        <div class="vstack">
-                            <div class="horizontal text-muted">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <span class="text-warning fw-semibold">5.0</span>
-                                <span class="text-muted">(5.2K+)</span>
-                            </div>
-                            <h4>Padang Restaurant</h4>
-                            <h5 class="text-muted">IDR 49.999 - IDR 560.000</h5>
-                            <div class="horizontal text-muted">
-                                <i class="bi bi-geo-alt-fill"></i>
-                                <span>&ensp;Padang, Indonesia</span>
-                            </div>
+                <!-- Start of Restaurant Overview (Card Overlay) -->
+                <div class="card border-0 rounded-4 shadow-sm w-25 position-absolute gap-4 p-4" id="overview">
+                    <div class="vstack">
+                        <div class="horizontal text-muted">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <span class="text-warning fw-semibold">5.0</span>
+                            <span class="text-muted">(5.2K+)</span>
                         </div>
-                        <div class="vstack gap-2">
-                            <a href="/reservation?id=1">
-                                <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
-                                    Make Reservation&ensp;
-                                    <i class="bi bi-chevron-right"></i>
-                                </button>
-                            </a>
-                            <div class="horizontal text-muted">
-                                <i class="bi bi-info-square"></i>
-                                <span>&ensp;No extra cost</span>
-                            </div>
+                        <h4>Padang Restaurant</h4>
+                        <h5 class="text-muted">IDR 49.999 - IDR 560.000</h5>
+                        <div class="horizontal text-muted">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>&ensp;Padang, Indonesia</span>
                         </div>
                     </div>
-                    <!-- End of Restaurant Overview (Card Overlay) -->
-                    <img src="assets/img/carousel_2.svg" alt="Slider" class="w-100">
+                    <div class="vstack gap-2">
+                        <a href="/reservation?id=1">
+                            <button class="btn btn-primary fw-semibold border-0 rounded-3 shadow-sm p-3">
+                                Make Reservation&ensp;
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                        </a>
+                        <div class="horizontal text-muted">
+                            <i class="bi bi-info-square"></i>
+                            <span>&ensp;No extra cost</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Restaurant Overview (Card Overlay) -->
+                <div class="slider-inner position-absolute hstack gap-4">
+                    <img src="assets/img/carousel_1.svg" alt="Slider" class="w-100 brighten">
+                    <img src="assets/img/carousel_2.svg" alt="Slider" class="w-100 brighten">
                 </div>
             </div>
             <!-- End of Restaurant Photo (Image Slider) -->
@@ -166,7 +169,7 @@
         <!-- End of Section #1 Slider -->
 
         <!-- Start of Section #2 Special Benefit For You -->
-        <section id="benefit">
+        <section id="benefit" data-aos="fade-up">
             <div class="container">
                 <div class="text-center vstack gap-3">
                     <!-- Start of Section Title -->
@@ -270,7 +273,7 @@
         <!-- End of Section #2 Special Benefit For You -->
 
         <!-- Start of Section #3 Top 3 Featured Restaurant -->
-        <section id="featured">
+        <section id="featured" data-aos="fade-up">
             <div class="container">
                 <div class="hstack gap-5">
                     <div class="vstack gap-5 align-self-center w-25">
@@ -340,8 +343,8 @@
         <!-- End of Section #3 Top 3 Featured Restaurant -->
 
         <!-- Start of Section #4 Restaurant Based By City -->
-        <section id="based">
-            <div class="container" data-aos="fade-up">
+        <section id="based" data-aos="fade-up">
+            <div class="container">
                 <div class="vstack gap-3">
                     <div class="hstack justify-content-between">
                         <!-- Start of Section Title -->
@@ -459,7 +462,7 @@
         <!-- End of Section #4 Restaurant Based By City -->
 
         <!-- Start of Top 4 Expert Chefs -->
-        <section id="expert">
+        <section id="expert" data-aos="fade-up">
             <div class="container">
                 <div class="hstack gap-5">
                     <!-- Start of Chef Profile (Photo) -->
@@ -467,7 +470,8 @@
                         class="rounded-5 shadow-sm position-relative mx-5">
                     <!-- End of Chef Profile (Photo) -->
                     <!-- Start of Chef Profile (Restaurant Card Overlay - Bottom Left) -->
-                    <div class="card border-0 rounded-4 shadow-sm hstack gap-3 p-4 position-absolute" id="chef-at-restaurant">
+                    <div class="card border-0 rounded-4 shadow-sm hstack gap-3 p-4 position-absolute"
+                        id="chef-at-restaurant">
                         <img src="assets/img/pearl_dolphin.svg" alt="Pearl Dolphin" loading="lazy" class="shadow-sm">
                         <div class="vstack gap-4 align-self-center">
                             <div>
@@ -485,7 +489,8 @@
                     </div>
                     <!-- End of Chef Profile (Restaurant Card Overlay - Bottom Left) -->
                     <!-- Start of Chef Profile (Experience - Top Right) -->
-                    <div class="card border-0 rounded-4 shadow-sm vstack gap-3 px-0 py-2 position-absolute" id="experience">
+                    <div class="card border-0 rounded-4 shadow-sm vstack gap-3 px-0 py-2 position-absolute"
+                        id="experience">
                         <img src="assets/img/experience.svg" alt="Experience" loading="lazy" class="mx-5 pt-3">
                         <div class="text-center">
                             <h5>12 Years</h5>
@@ -571,14 +576,16 @@
     <!--* End of Main Content -->
 
     <!--* Start of External JavaScript -->
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
     <!--* End of External JavaScript -->
 
     <!--* Start of Bootstrap Framework (JavaScript Bundle with Popper) -->
     <script src="assets/framework/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
     <!--* End of Bootstrap Framework (JavaScript Bundle with Popper) -->
 
-    <!-- <script src="assets/library/aos-master/aos-master/dist/aos.js"></script> -->
+    <!-- * Start of Animate On Scroll Library (JavaScript) -->
+    <script src="assets/library/aos/aos-master/dist/aos.js"></script>
+    <!-- * End of Animate On Scroll Library (JavaScript) -->
 </body>
 
 </html>
