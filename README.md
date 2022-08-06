@@ -3,8 +3,8 @@
 ### 👨‍💻 Tentang Pengembang
 [Probo Krishnacahya](https://rebrand.ly/probo-krishnacahya)
 
-### 📱 Tentang Aplikasi
-- **Penyelenggara:** BuildWith Angga.
+### 🌐 Tentang Situs Web
+- **Penyelenggara:** [BuildWith Angga](https://buildwithangga.com/).
 - **Acara:** Frontend Coding Challenge Agustusan (Slicing Figma to HTML, CSS, and Bootstrap).
 - **Tema:** Restaurant Landing Page Design.
 
@@ -12,4 +12,4 @@
 
 ---
 
-`Agustus 2022 - Probo Krishnacahya`
+`2022 - Probo Krishnacahya`
