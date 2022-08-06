@@ -6,7 +6,11 @@ const fadeOut = () => {
 
 window.addEventListener('load', fadeOut);
 //* End of Website Preloading
-
+// $(function () {
+//     AOS.init();
+//     AOS.refreshHard();
+// });
+// window.addEventListener('load', AOS.refresh);
 //* Start of Restaurant Photo (Image Slider)
 // Returns the first element within the document that matches the specified or group of selectors.
 let outerSlider = document.querySelector(".slider");

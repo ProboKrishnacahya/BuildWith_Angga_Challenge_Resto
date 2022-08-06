@@ -80,6 +80,18 @@ html {
     background-color: var(--cherokee);
 }
 
+.slider {
+    height: 90vh;
+    top: 0;
+    left: 85px;
+}
+
+.slider-inner {
+    display: flex;
+    gap: 0.625rem;
+    pointer-events: none;
+}
+
 .text-link {
     color: var(--cherokee);
 }
@@ -100,13 +112,13 @@ html {
 /** Selector (ID) */
 #chef-at-restaurant {
     z-index: 1;
-    top: 3170px;
+    top: 3190px;
 }
 
 #experience {
     z-index: 1;
-    top: 2580px;
-    left: 540px;
+    top: 2605px;
+    left: 530px;
 }
 
 #overview {
@@ -187,18 +199,6 @@ section:not(:first-child, :last-child) {
 
 .slider::-webkit-scrollbar {
     display: none;
-}
-
-.slider {
-    height: 90vh;
-    top: 0;
-    left: 85px;
-}
-
-.slider-inner {
-    display: flex;
-    gap: 0.625rem;
-    pointer-events: none;
 }
 
 /* * At-rules */
